@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>初探Es6 | jm1231&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="背景：最近搞react得过程中，一直会接触到es6的语法，看来很有必要学习和研究一下啊。
+
+一、let和const
+ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+
+let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。
+
+在块级作用域内，使用let命令或者const命令声明变量之前，该变量都是不可用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探Es6">
+<meta property="og:url" content="http://yoursite.com/2016/05/12/初探Es6/index.html">
+<meta property="og:site_name" content="jm1231'Blog">
+<meta property="og:description" content="背景：最近搞react得过程中，一直会接触到es6的语法，看来很有必要学习和研究一下啊。
+
+一、let和const
+ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+
+let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。
+
+在块级作用域内，使用let命令或者const命令声明变量之前，该变量都是不可用">
+<meta property="og:updated_time" content="2016-07-15T04:01:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初探Es6">
+<meta name="twitter:description" content="背景：最近搞react得过程中，一直会接触到es6的语法，看来很有必要学习和研究一下啊。
+
+一、let和const
+ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+
+let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。
+
+在块级作用域内，使用let命令或者const命令声明变量之前，该变量都是不可用">
+  
+    <link rel="alternate" href="/atom.xml" title="jm1231&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jm1231&#39;Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-初探Es6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/12/初探Es6/" class="article-date">
+  <time datetime="2016-05-12T13:13:22.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初探Es6
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><em>背景</em>：最近搞react得过程中，一直会接触到es6的语法，看来很有必要学习和研究一下啊。</p>
+</blockquote>
+<h2 id="一、let和const"><a href="#一、let和const" class="headerlink" title="一、let和const"></a>一、let和const</h2><ol>
+<li><p>ES6新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>，但是所声明的变量，只在<code>let</code>命令所在的代码块内有效。</p>
+</li>
+<li><p><code>let</code>不像<code>var</code>那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。</p>
+</li>
+<li><p>在块级作用域内，使用<code>let</code>命令或者<code>const</code>命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称TDZ）。</p>
+</li>
+<li><p>既然出现了TDZ，那也意味着<code>typeof</code>不再是一个百分之百安全的操作。如果在死区内使用<code>typeof</code>则会抛出一个<code>ReferenceError</code>错误（<strong>注意</strong><code>typeof</code>操作符如果返回<code>undefined</code>表示的是未定义，并不算报错）。</p>
+ <a id="more"></a>
+</li>
+<li><p><code>let</code>不允许在相同作用域内，重复声明同一个变量。</p>
+</li>
+<li><p>es6实际上增加了一个块级作用域（以前只有全局作用域和函数作用域），另外，ES6也规定，函数本身的作用域，在其所在的块级作用域之内。</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'I am outside!'</span>); &#125;</div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(<span class="literal">false</span>) &#123;</div><div class="line">    <span class="comment">// 重复声明一次函数f</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'I am inside!'</span>); &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  f();</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
+<p> <strong>结论：</strong>es6之前，得到的结果是’inside’,因为不管进不进的了<code>if</code>，函数申明都会被提到当前作用域的顶部，而在es6中，得到的结果是’ouside’,不管会不会进入if代码块，其内部声明的函数皆不会影响到作用域的外部。</p>
+</li>
+<li><p><code>const</code>声明是常量。一旦声明，常量的值就不能改变。在<code>&#39;use strict&#39;</code>模式下，改变常量的值会报错。注意，如果是常规模式，对常量赋值不会报错，但也是无效的。</p>
+</li>
+<li><p><code>const</code>的作用域与<code>let</code>命令相同：只在声明所在的块级作用域内有效。<code>const</code>命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。<code>const</code>声明的常量，也与<code>let</code>一样不可重复声明。</p>
+</li>
+<li><p>对于<code>const</code>命令申明的复合类型的常量，常量名不指向数据，而是指向数据所在的地址。<code>const</code>命令只是保证常量名指向的地址不变，并不保证该地址的数据不变。</p>
+<ul>
+<li><p>定义对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = &#123;&#125;;</div><div class="line">foo.prop = <span class="number">123</span>;</div><div class="line"></div><div class="line">foo.prop</div><div class="line"><span class="comment">// 123</span></div><div class="line"></div><div class="line">foo = &#123;&#125; <span class="comment">// TypeError: "foo" is read-only</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>定义数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [];</div><div class="line">a.push(<span class="string">"Hello"</span>); <span class="comment">// 可执行</span></div><div class="line">a.length = <span class="number">0</span>;    <span class="comment">// 可执行</span></div><div class="line">a = [<span class="string">"Dave"</span>];    <span class="comment">// 报错</span></div></pre></td></tr></table></figure>
+<p>如果真的想将对象冻结，应该使用<code>Object.freeze</code>方法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 常规模式时，下面一行不起作用；</span></div><div class="line"><span class="comment">// 严格模式时，该行会报错</span></div><div class="line">foo.prop = <span class="number">123</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>var</code>和<code>function</code>定义的全局变量实际上是全局对象的属性，而<code>let</code>和 <code>const</code>定义的变量则不能通过全局对象的属性的形式来用，否则会报出<code>undefined</code>。</p>
+</li>
+</ol>
+<h2 id="二、变量的解构赋值"><a href="#二、变量的解构赋值" class="headerlink" title="二、变量的解构赋值"></a>二、变量的解构赋值</h2><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
+<h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><p><em>完全解构</em></p>
+<p>以前数组的赋值只能这样做</p>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> c = <span class="number">3</span>;</div></pre></td></tr></table></figure>
+</code></pre><p>现在可以通过解构赋值</p>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
+</code></pre><p>本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
+<p><em>不完全解构</em></p>
+<p>等号左边的模式，只匹配一部分的等号右边的数组。</p>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [x, y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">x <span class="comment">// 1</span></div><div class="line">y <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> [a, [b], d] = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>], <span class="number">4</span>];</div><div class="line">a <span class="comment">// 1</span></div><div class="line">b <span class="comment">// 2</span></div><div class="line">d <span class="comment">// 4</span></div></pre></td></tr></table></figure>
+</code></pre><p><em>允许有默认值</em></p>
+<p>触发默认值必须要返回一个undefined菜有效，如果一个数组成员是null，默认值就不会生效，因为null不严格等于undefined。</p>
+<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> [foo = <span class="literal">true</span>] = [];</div><div class="line">foo <span class="comment">// true</span></div><div class="line"></div><div class="line">[x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>] <span class="comment">// x='a', y='b'</span></div><div class="line">[x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>, <span class="literal">undefined</span>] <span class="comment">// x='a', y='b'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> [x = <span class="number">1</span>] = [<span class="literal">undefined</span>];</div><div class="line">x <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> [x = <span class="number">1</span>] = [<span class="literal">null</span>];</div><div class="line">x <span class="comment">// null</span></div></pre></td></tr></table></figure>
+</code></pre><h3 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h3><p>对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p>
+<h3 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h3><h3 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h3><h3 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h3><h3 id="解构赋值的用途"><a href="#解构赋值的用途" class="headerlink" title="解构赋值的用途"></a>解构赋值的用途</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/12/初探Es6/" data-id="ciqne785v000yz0l8yg073s87" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAscript6/">ECMAscript6</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/16/React路由/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          React路由
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/10/认识gulp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">认识gulp</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAscript6/">ECMAscript6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型转换/">数据类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容/">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/API/" style="font-size: 13.33px;">API</a> <a href="/tags/ECMAscript6/" style="font-size: 10px;">ECMAscript6</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a> <a href="/tags/浏览器兼容/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/24/数组直接相减的返回值/">数组直接相减的返回值</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/12/留言板新增分页功能/">留言板新增分页功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/09/不到一百行php代码实现留言板功能/">不到一百行php代码实现留言板功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/01/马小二奇遇记/">马小二奇遇记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/26/API编写过程中的错误记录与总结/">API编写过程中的错误记录与总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 jm1231<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

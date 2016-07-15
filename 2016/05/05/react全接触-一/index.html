@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>React全接触(一) | jm1231&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近开始学习和接触React，借此机会记录下自己的学习心得。
+一、先了解一下React
+React一开始是facebook内部的项目，主要用在instagram网站上面的，后来发现这个框架用起来很方便，所以干脆就开源了，一下子吸引了众多的粉丝。它主要就是用来干这个事情的：
+
+building large applications with data that changes over time.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React全接触(一)">
+<meta property="og:url" content="http://yoursite.com/2016/05/05/react全接触-一/index.html">
+<meta property="og:site_name" content="jm1231'Blog">
+<meta property="og:description" content="最近开始学习和接触React，借此机会记录下自己的学习心得。
+一、先了解一下React
+React一开始是facebook内部的项目，主要用在instagram网站上面的，后来发现这个框架用起来很方便，所以干脆就开源了，一下子吸引了众多的粉丝。它主要就是用来干这个事情的：
+
+building large applications with data that changes over time.">
+<meta property="og:image" content="http://n1.itc.cn/img8/wb/smccloud/fetch/2015/09/15/8173412602700564.JPG">
+<meta property="og:updated_time" content="2016-07-15T04:01:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React全接触(一)">
+<meta name="twitter:description" content="最近开始学习和接触React，借此机会记录下自己的学习心得。
+一、先了解一下React
+React一开始是facebook内部的项目，主要用在instagram网站上面的，后来发现这个框架用起来很方便，所以干脆就开源了，一下子吸引了众多的粉丝。它主要就是用来干这个事情的：
+
+building large applications with data that changes over time.">
+<meta name="twitter:image" content="http://n1.itc.cn/img8/wb/smccloud/fetch/2015/09/15/8173412602700564.JPG">
+  
+    <link rel="alternate" href="/atom.xml" title="jm1231&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jm1231&#39;Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react全接触-一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/05/react全接触-一/" class="article-date">
+  <time datetime="2016-05-05T13:02:34.000Z" itemprop="datePublished">2016-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React全接触(一)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近开始学习和接触<code>React</code>，借此机会记录下自己的学习心得。</p>
+<h4 id="一、先了解一下React"><a href="#一、先了解一下React" class="headerlink" title="一、先了解一下React"></a>一、先了解一下React</h4><p><img src="http://n1.itc.cn/img8/wb/smccloud/fetch/2015/09/15/8173412602700564.JPG" alt="react"></p>
+<p><code>React</code>一开始是facebook内部的项目，主要用在instagram网站上面的，后来发现这个框架用起来很方便，所以干脆就开源了，一下子吸引了众多的粉丝。它主要就是用来干这个事情的：</p>
+<blockquote>
+<p>building large applications with data that changes over time.</p>
+</blockquote>
+<p>什么意思呢？通俗的理解也就是说，只要做了一个应用之后，底层数据发生了变化，那么它用户界面的数据渲染就会同时发生相应的改变，很方便。</p>
+<p>可能很多人都听说过 <code>React</code> 和 <code>React Native</code>，他们到底是什么关系呢？<br><a id="more"></a><br>其实，<code>React Native</code> 就是 <code>React</code> 蓬勃发展的产物，<code>React</code> 本身越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案，最后衍生出来的 <code>React Native</code> 项目，是希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机。</p>
+<p>OOOOOOOOOOOK…..扯了这么多，我们进入正题，进入<code>React</code>的学习。</p>
+<h4 id="二、开始React前的准备工作"><a href="#二、开始React前的准备工作" class="headerlink" title="二、开始React前的准备工作"></a>二、开始React前的准备工作</h4><p>可以在<a href="https://facebook.github.io/react/downloads.html" target="_blank" rel="external">官网</a>下载安装包，里面已经有一些demo可以参考学习用。</p>
+<p><strong>这里要注意，运行例子的时候一定要在服务器环境下，否则可能没有办法正常显示内容，而且浏览器下面需要安装react的插件</strong></p>
+<p>以chrome浏览器为例，如果你没有安装插件，可能会在控制台出现这样的一段：</p>
+<blockquote>
+<p>Download the React DevTools for a better development experience: <a href="https://fb.me/react-devtools" target="_blank" rel="external">https://fb.me/react-devtools</a></p>
+</blockquote>
+<p>这个很好解决，只需要按照提示安装就好了，不过谷歌浏览器安装插件可能需要科学上网才行哦～</p>
+<p>插件装好了之后可能就是搭建本地服务器的问题了，推荐大家使用<code>nginx</code>，直接在终端里面敲命令</p>
+<pre><code>brew install nginx
+</code></pre><p>就可以搞定，前提是已经安装过<code>homebrew</code>，如果觉得这个方式比较麻烦，也可以使用<code>mamp</code>，<code>wamp</code>之类的软件，建本地服务器很方便。</p>
+<p>如果想要一个更加优质的使用体验，那就涉及到各种工具的使用，所以之前先把它们准备好。新建一个文件夹准备放react的相关资料，然后进入到这个文件夹中用终端的方式安装：</p>
+<pre><code>npm install react react-tools gulp react-jsx react-dom grunt grunt-cli --save-dev
+
+npm install webpack bower -g
+</code></pre><p>这里出现了<code>npm</code>，这其实是<code>node.js</code>的一个包管理器，可以快速的安装一些工具。</p>
+<p>OOOOOOOOOOK……准备工作完成，下面终于要揭开react的面纱啦！    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/05/react全接触-一/" data-id="ciqne785a000bz0l8cdwztj1t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/07/踩到了react的坑/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          踩到了react的坑
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/29/js学习笔记（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js学习笔记（二）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAscript6/">ECMAscript6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型转换/">数据类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容/">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/API/" style="font-size: 13.33px;">API</a> <a href="/tags/ECMAscript6/" style="font-size: 10px;">ECMAscript6</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a> <a href="/tags/浏览器兼容/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/24/数组直接相减的返回值/">数组直接相减的返回值</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/12/留言板新增分页功能/">留言板新增分页功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/09/不到一百行php代码实现留言板功能/">不到一百行php代码实现留言板功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/01/马小二奇遇记/">马小二奇遇记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/26/API编写过程中的错误记录与总结/">API编写过程中的错误记录与总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 jm1231<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

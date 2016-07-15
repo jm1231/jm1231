@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jm1231&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="世界那么大，我在写代码。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jm1231'Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="jm1231'Blog">
+<meta property="og:description" content="世界那么大，我在写代码。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jm1231'Blog">
+<meta name="twitter:description" content="世界那么大，我在写代码。">
+  
+    <link rel="alternate" href="/atom.xml" title="jm1231&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jm1231&#39;Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-数组直接相减的返回值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/24/数组直接相减的返回值/" class="article-date">
+  <time datetime="2016-06-24T03:56:08.000Z" itemprop="datePublished">2016-06-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/24/数组直接相减的返回值/">数组直接相减的返回值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先来看一段代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> b = [<span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log( b - a );</div><div class="line"><span class="keyword">if</span>(<span class="built_in">isNaN</span>(b - a))&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'a'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>先想一下这样能得出什么结论，反正我觉得两个数组直接相减，肯定应该返回一个NaN啊，所以if条件判断isNaN(b - a)肯定应该返回一个true，然后控制台打印出一个”a”，皆大欢喜。</p>
+<p>万万没想到<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/06/24/数组直接相减的返回值/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/24/数组直接相减的返回值/" data-id="ciqne78660013z0l8uy73nd9n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型转换/">数据类型转换</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-留言板新增分页功能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/12/留言板新增分页功能/" class="article-date">
+  <time datetime="2016-06-12T14:37:21.000Z" itemprop="datePublished">2016-06-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/12/留言板新增分页功能/">留言板新增分页功能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.xiuyetang.com/view/275.html">php留言板</a>功能做完后，还存在一个问题，就是留言数量变多后，需要鼠标滚动很长的一段距离，这样用户体验不好，所以决定新增加一个功能：<br>翻页。</p>
+<p>我们需要分析一下怎么实现这样一个功能。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>需求点很明确，每页显示五条一级数据。</p>
+<p>具体分析包含了下面三个方面：</p>
+<h3 id="取出所有的一级数据"><a href="#取出所有的一级数据" class="headerlink" title="取出所有的一级数据"></a>取出所有的一级数据</h3><p>要取出所有一级数据，也就是所有<code>fid=0</code>的数据。</p>
+<h3 id="计算页数"><a href="#计算页数" class="headerlink" title="计算页数"></a>计算页数</h3><blockquote>
+<p>页数 = 取出的所有数据数 / 每页显示的条数。</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2016/06/12/留言板新增分页功能/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/12/留言板新增分页功能/" data-id="ciqne78670015z0l8zvzmegjx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-不到一百行php代码实现留言板功能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/09/不到一百行php代码实现留言板功能/" class="article-date">
+  <time datetime="2016-06-09T13:22:10.000Z" itemprop="datePublished">2016-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/09/不到一百行php代码实现留言板功能/">不到一百行php代码实现留言板功能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>乍一看这个标题，赶脚很牛逼，有木有？！其实，我特么熬了5个小时！！！</p>
+<p>摔！！</p>
+<p>喝口茶，平静一下，我们来慢慢分析。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>留言板功能我们都熟悉，无非就是两大功能点：</p>
+<ol>
+<li>写留言</li>
+<li>回复留言</li>
+</ol>
+<h2 id="拆分实施步骤"><a href="#拆分实施步骤" class="headerlink" title="拆分实施步骤"></a>拆分实施步骤</h2><p>围绕上面的两大功能点，我们可以更具体的想一下下一步该怎么走。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/06/09/不到一百行php代码实现留言板功能/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/09/不到一百行php代码实现留言板功能/" data-id="ciqne785p000tz0l8c5wueti1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-马小二奇遇记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/01/马小二奇遇记/" class="article-date">
+  <time datetime="2016-06-01T03:47:19.000Z" itemprop="datePublished">2016-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/01/马小二奇遇记/">马小二奇遇记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2015年以前，我对猫、狗的喜爱程度，仅仅是觉得他们可爱，而且要颜值高的。</p>
+<p>然后，2015年，我养了自己的第一条狗（名叫多多），后来又收养了一只流浪喵（名叫天猫）。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/06/01/马小二奇遇记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/01/马小二奇遇记/" data-id="ciqne786e001bz0l8jjfg00s5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-API编写过程中的错误记录与总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/26/API编写过程中的错误记录与总结/" class="article-date">
+  <time datetime="2016-05-26T12:17:16.000Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/26/API编写过程中的错误记录与总结/">API编写过程中的错误记录与总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="错误记录"><a href="#错误记录" class="headerlink" title="错误记录"></a>错误记录</h2><h3 id="sql语句错误"><a href="#sql语句错误" class="headerlink" title="sql语句错误"></a>sql语句错误</h3><ol>
+<li>关键词后面没有加空格</li>
+<li>中英文标点混乱</li>
+<li>表名与字段名没有对应</li>
+<li>对应接口中的方法名写错</li>
+</ol>
+<h3 id="传值"><a href="#传值" class="headerlink" title="传值"></a>传值</h3><ol>
+<li>传值失败 </li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><ol>
+<li>定义好了代码片段可以直接通过快捷键将大段代码快速的堆放到页面中，效率高（代码需要长期的积累，将常用的保存使用）</li>
+<li>使用<code>ctrl + alt + a</code>快捷键用来排版，优化代码界面</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2016/05/26/API编写过程中的错误记录与总结/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/26/API编写过程中的错误记录与总结/" data-id="ciqne784e0000z0l84v88qcr5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API/">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAscript6/">ECMAscript6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型转换/">数据类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容/">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/API/" style="font-size: 13.33px;">API</a> <a href="/tags/ECMAscript6/" style="font-size: 10px;">ECMAscript6</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a> <a href="/tags/浏览器兼容/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/24/数组直接相减的返回值/">数组直接相减的返回值</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/12/留言板新增分页功能/">留言板新增分页功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/09/不到一百行php代码实现留言板功能/">不到一百行php代码实现留言板功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/01/马小二奇遇记/">马小二奇遇记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/26/API编写过程中的错误记录与总结/">API编写过程中的错误记录与总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 jm1231<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

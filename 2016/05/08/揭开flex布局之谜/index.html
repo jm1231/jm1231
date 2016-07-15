@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>揭开flex布局之谜 | jm1231&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="flex布局用习惯了传统的display、position和float布局方式，今天深入的学习了一下flex布局。
+一、什么是flex？flex布局就是弹性布局，任何一个容器都可以指定弹性布局display:flex;，行内元素也可以display:inline-flex;
+
+注意，采用flex布局后，子元素的float、clear、vertical-align属性将失效
+
+二、父容器的属性
+fl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="揭开flex布局之谜">
+<meta property="og:url" content="http://yoursite.com/2016/05/08/揭开flex布局之谜/index.html">
+<meta property="og:site_name" content="jm1231'Blog">
+<meta property="og:description" content="flex布局用习惯了传统的display、position和float布局方式，今天深入的学习了一下flex布局。
+一、什么是flex？flex布局就是弹性布局，任何一个容器都可以指定弹性布局display:flex;，行内元素也可以display:inline-flex;
+
+注意，采用flex布局后，子元素的float、clear、vertical-align属性将失效
+
+二、父容器的属性
+fl">
+<meta property="og:updated_time" content="2016-07-15T04:01:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="揭开flex布局之谜">
+<meta name="twitter:description" content="flex布局用习惯了传统的display、position和float布局方式，今天深入的学习了一下flex布局。
+一、什么是flex？flex布局就是弹性布局，任何一个容器都可以指定弹性布局display:flex;，行内元素也可以display:inline-flex;
+
+注意，采用flex布局后，子元素的float、clear、vertical-align属性将失效
+
+二、父容器的属性
+fl">
+  
+    <link rel="alternate" href="/atom.xml" title="jm1231&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jm1231&#39;Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-揭开flex布局之谜" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/08/揭开flex布局之谜/" class="article-date">
+  <time datetime="2016-05-08T07:15:16.000Z" itemprop="datePublished">2016-05-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      揭开flex布局之谜
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h1><p>用习惯了传统的<code>display</code>、<code>position</code>和<code>float</code>布局方式，今天深入的学习了一下flex布局。</p>
+<h2 id="一、什么是flex？"><a href="#一、什么是flex？" class="headerlink" title="一、什么是flex？"></a>一、什么是flex？</h2><p>flex布局就是弹性布局，任何一个容器都可以指定弹性布局<code>display:flex;</code>，行内元素也可以<code>display:inline-flex;</code></p>
+<blockquote>
+<p><em>注意</em>，采用flex布局后，<strong>子元素</strong>的<code>float</code>、<code>clear</code>、<code>vertical-align</code>属性将失效</p>
+</blockquote>
+<h2 id="二、父容器的属性"><a href="#二、父容器的属性" class="headerlink" title="二、父容器的属性"></a>二、父容器的属性</h2><ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content<a id="more"></a>
+</li>
+</ul>
+<h3 id="1-flex-direction"><a href="#1-flex-direction" class="headerlink" title="1.flex-direction"></a>1.flex-direction</h3><p>规定了容器中子项目的排列方向  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-direction:row | row-reverse | column | column-reverse</div></pre></td></tr></table></figure>
+<h3 id="2-flex-wrap"><a href="#2-flex-wrap" class="headerlink" title="2.flex-wrap"></a>2.flex-wrap</h3><p>规定了容器中子项目需不需要换行显示  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-wrap:nowrap | wrap | wrap-reverse</div></pre></td></tr></table></figure>
+<h3 id="3-flex-flow"><a href="#3-flex-flow" class="headerlink" title="3.flex-flow"></a>3.flex-flow</h3><p>flex-direction和flex-flow的简写形式，默认值为row nowrap</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-flow:&lt;flex-direction&gt; || &lt;flex-wrap&gt;</div></pre></td></tr></table></figure>
+<h3 id="4-justify-content"><a href="#4-justify-content" class="headerlink" title="4.justify-content"></a>4.justify-content</h3><p>规定了容器中子项目在主轴上的对齐方式 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">justify-content:flex-start | flex-end | center | space-between | space-around</div></pre></td></tr></table></figure>
+<h3 id="5-align-items"><a href="#5-align-items" class="headerlink" title="5.align-items"></a>5.align-items</h3><p>规定了容器中子项目在交叉轴上的对齐方式 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">align-items:flex-start | flex-end | center | baseline | stretch</div></pre></td></tr></table></figure>
+<h3 id="6-align-content"><a href="#6-align-content" class="headerlink" title="6.align-content"></a>6.align-content</h3><p>规定了容器中子项目在多轴上的对齐方式，如果只有一根轴线，则不起作用</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">align-content:flex-start | flex-end | center | space-between | space-around | stretch</div></pre></td></tr></table></figure>
+<h2 id="三、子项目的属性"><a href="#三、子项目的属性" class="headerlink" title="三、子项目的属性"></a>三、子项目的属性</h2><ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+<h3 id="1-order"><a href="#1-order" class="headerlink" title="1.order"></a>1.order</h3><p>规定了容器中子项目的排列顺序，数字越小排位越靠前，默认为0，负数也可以设置。 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">order</span>:&lt;<span class="selector-tag">integer</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-flex-grow"><a href="#2-flex-grow" class="headerlink" title="2.flex-grow"></a>2.flex-grow</h3><p>规定了容器中子项目的放大比例，默认为0，即就算有剩余空间，也不放大。如果有一个子项目设置了flex-grow为2，其他都为1，那么在多余的剩余空间中，为2的占据的剩余空间将大一倍。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">flex-grow</span>:&lt;<span class="selector-tag">number</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="3-flex-shrink"><a href="#3-flex-shrink" class="headerlink" title="3.flex-shrink"></a>3.flex-shrink</h3><p>规定了容器中子项目的缩小比例，默认为1，即空间不足时，该项目将缩小。负值无效。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">flex-shrink</span>:&lt;<span class="selector-tag">number</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="4-flex-basis"><a href="#4-flex-basis" class="headerlink" title="4.flex-basis"></a>4.flex-basis</h3><p>规定了容器中子项目分配剩余空间之前，项目占据的主轴空间。浏览器就是根据这一属性来计算是否还有剩余空间。默认值为auto。可以设置固定300培px，将占据固定空间。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex-basis:&lt;length&gt; | auto</div></pre></td></tr></table></figure>
+<h3 id="5-flex"><a href="#5-flex" class="headerlink" title="5.flex"></a>5.flex</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。建议优先使用none（0 0 auto）auto（1 1 auto）<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">flex:none | auto | [&lt;flex-grow&gt; &lt;flex-shrink&gt;||&lt;flex-basis&gt;]</div></pre></td></tr></table></figure></p>
+<h3 id="6-align-self"><a href="#6-align-self" class="headerlink" title="6.align-self"></a>6.align-self</h3><p>允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">align-self: auto | flex-start | flex-end | center | baseline | stretch</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/08/揭开flex布局之谜/" data-id="ciqne78640011z0l80jvshsl6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/10/认识gulp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          认识gulp
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/07/踩到了react的坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">踩到了react的坑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ECMAscript6/">ECMAscript6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型转换/">数据类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容/">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/API/" style="font-size: 13.33px;">API</a> <a href="/tags/ECMAscript6/" style="font-size: 10px;">ECMAscript6</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 16.67px;">MySQL</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a> <a href="/tags/浏览器兼容/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/24/数组直接相减的返回值/">数组直接相减的返回值</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/12/留言板新增分页功能/">留言板新增分页功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/09/不到一百行php代码实现留言板功能/">不到一百行php代码实现留言板功能</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/01/马小二奇遇记/">马小二奇遇记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/26/API编写过程中的错误记录与总结/">API编写过程中的错误记录与总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 jm1231<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
